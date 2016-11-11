@@ -5,4 +5,5 @@
 ```r
 library(ProjectTemplate)
 load.project()
+source('src/eda.R')
 ```
