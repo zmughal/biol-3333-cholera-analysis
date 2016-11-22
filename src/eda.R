@@ -25,7 +25,7 @@ hurricane_matthew_date <- as.Date('2016-10-07')
 hurricane_matthew_date_vline <- geom_vline(xintercept=as.numeric(hurricane_matthew_date), linetype=4)
 
 plot.all.delta.cases <- ggplot(tracking.agg, aes(Date,CleanDeltaCases)) +
-	geom_line() +
+	geom_bar( stat = 'identity' ) +
 	hurricane_matthew_date_vline
 #print(plot.all.delta.cases)
 ggsave( file.path('graphs', 'plot.all.delta.cases.png'))
